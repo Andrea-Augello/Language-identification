@@ -5,6 +5,7 @@
 
 # ### Load libraries
 
+from __future__ import print_function
 import pandas as pd
 from pandas.plotting import scatter_matrix
 from matplotlib import pyplot
@@ -83,6 +84,8 @@ def parse_string(word, lang = None, scale = False):
 #get_ipython().system('tail ./Data/*.txt')
 
 
+print("Loading data...")
+
 names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
          'U', 'V', 'W','X', 'Y', 'Z', 'class']
 
@@ -134,6 +137,7 @@ models.append(('MLP', MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_siz
 
 # Evalutate each model in turn
 
+print("Evalutating different models...")
 
 results = []
 names = []
@@ -161,15 +165,14 @@ pyplot.show()
 
 
 
+print("Training final model...")
+
 model = SVC(gamma='scale', probability=True)
 model.fit(X_train, Y_train)
 predictions = model.predict(X_validation)
 
 
 # ### Final accuracy analysis 
-# 
-
-# In[11]:
 
 
 model_name = str(model).split('(')[0]

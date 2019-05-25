@@ -5,25 +5,16 @@
 
 # ### Load libraries
 
+from __future__ import print_function
 import sys
 import pandas as pd
-from pandas.plotting import scatter_matrix
-from matplotlib import pyplot
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
-from sklearn.neural_network import MLPClassifier
-import string
 import collections
+import string
 import pickle
 
 
