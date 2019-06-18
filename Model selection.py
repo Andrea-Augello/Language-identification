@@ -1,4 +1,4 @@
-#!/home/andrea/anaconda3/bin/python
+#!/usr/bin/env python
 # coding: utf-8
 
 # # Machine Learning Project: language identification
